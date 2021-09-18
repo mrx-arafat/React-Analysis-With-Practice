@@ -10,12 +10,36 @@ function App() {
 
     fontWeight: "500",
   };
+  //cinema
+  const cinemas = [
+    {
+      nayok: "salman",
+      nayika: "sabana",
+    },
+    {
+      nayok: "sahruk",
+      nayika: "sabana2",
+    },
+    {
+      nayok: "zyan",
+      nayika: "sabana xd",
+    },
+  ];
 
+  //nayok
   const nayoks = ["arafat", "salman", "james", "doge"];
 
   return (
     <div style={xxx} className="App">
       <p>I love {nameF}</p>
+
+      <p>cinema Dynamic</p>
+
+      <ul>
+        {cinemas.map((cinema) => (
+          <Cinema name={cinema.nayok} nayika={cinema.nayika}></Cinema>
+        ))}
+      </ul>
 
       <ul>
         <li>{nayoks[0]}</li>
@@ -23,29 +47,23 @@ function App() {
         <li>{nayoks[2]}</li>
         <li>{nayoks[3]}</li>
       </ul>
-
       <p>efficient dynamic:</p>
       <ul>
         {nayoks.map((nk) => (
           <li>{nk}</li>
         ))}
       </ul>
+      <Friend
+        name="Easin Arafat"
+        address="Jashore"
+        contact="01312300321"
+      ></Friend>
+      <Friend
+        name="Easin Arafat"
+        address="Jashore"
+        contact="01312300321"
+      ></Friend>
 
-      <Friend
-        name="Easin Arafat"
-        address="Jashore"
-        contact="01312300321"
-      ></Friend>
-      <Friend
-        name="Easin Arafat"
-        address="Jashore"
-        contact="01312300321"
-      ></Friend>
-      <Friend
-        name="Easin Arafat"
-        address="Jashore"
-        contact="01312300321"
-      ></Friend>
       {/* <Student Name="Arafat" Nayika="tasnim"></Student>
       <Student Name="easin" Nayika="cheka"></Student>
       <Student Name="easin" Nayika="cheka"></Student>
@@ -58,7 +76,7 @@ function App() {
 export default App;
 
 function Student(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="student">
       <h3>{props.Name}</h3>
@@ -69,13 +87,22 @@ function Student(props) {
 }
 
 function Friend(props) {
-  console.log(props);
+  // console.log(props);
 
   return (
     <div className="student">
       <h4> name :{props.name}</h4>
       <h4> address :{props.address}</h4>
       <h4>contact :{props.contact}</h4>
+    </div>
+  );
+}
+
+function Cinema(props) {
+  return (
+    <div className="student">
+      <p>name: {props.name}</p>
+      <h1>nayika: {props.nayika}</h1>
     </div>
   );
 }
