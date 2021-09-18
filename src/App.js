@@ -2,25 +2,35 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit LoL <code>src/App.js</code> and save to reload.
-        </p>
+  var nameF = "React";
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const xxx = {
+    backgroundColor: "black",
+    color: "white",
+    height: "100vh",
+
+    fontWeight: "500",
+  };
+  return (
+    <div style={xxx} className="App">
+      <p>I love {nameF}</p>
+
+      <Student Name="arafat" Nyika></Student>
+      <Student></Student>
+      <Student></Student>
+      <Student></Student>
     </div>
   );
 }
 
 export default App;
+
+function Student(props) {
+  console.log(props);
+  return (
+    <div className="student">
+      <h3>Easin Arafat</h3>
+      <p>Profession: Web Developer</p>
+    </div>
+  );
+}

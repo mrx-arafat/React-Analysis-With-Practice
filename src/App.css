@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+.student {
+  border: 1px solid gold;
+  margin: 20px;
+}
