@@ -15,8 +15,8 @@ function App() {
     <div style={xxx} className="App">
       <p>I love {nameF}</p>
 
-      <Student Name="arafat" Nyika></Student>
-      <Student></Student>
+      <Student Name="arafat" Nayika="tasnim"></Student>
+      <Student Name="easin" Nayika="cheka"></Student>
       <Student></Student>
       <Student></Student>
     </div>
