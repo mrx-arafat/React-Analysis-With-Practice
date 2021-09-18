@@ -10,26 +10,42 @@ function App() {
 
     fontWeight: "500",
   };
+
+  const nayoks = ["arafat", "salman", "james", "doge"];
+
   return (
     <div style={xxx} className="App">
       <p>I love {nameF}</p>
 
-      <Friend
-        name="Easin Arafat"
-        address="Jashore"
-        contact="01312300321"
-      ></Friend>
-      <Friend
-        name="Easin Arafat"
-        address="Jashore"
-        contact="01312300321"
-      ></Friend>
-      <Friend
-        name="Easin Arafat"
-        address="Jashore"
-        contact="01312300321"
-      ></Friend>
+      <ul>
+        <li>{nayoks[0]}</li>
+        <li>{nayoks[1]}</li>
+        <li>{nayoks[2]}</li>
+        <li>{nayoks[3]}</li>
+      </ul>
 
+      <p>efficient dynamic:</p>
+      <ul>
+        {nayoks.map((nk) => (
+          <li>{nk}</li>
+        ))}
+      </ul>
+
+      <Friend
+        name="Easin Arafat"
+        address="Jashore"
+        contact="01312300321"
+      ></Friend>
+      <Friend
+        name="Easin Arafat"
+        address="Jashore"
+        contact="01312300321"
+      ></Friend>
+      <Friend
+        name="Easin Arafat"
+        address="Jashore"
+        contact="01312300321"
+      ></Friend>
       {/* <Student Name="Arafat" Nayika="tasnim"></Student>
       <Student Name="easin" Nayika="cheka"></Student>
       <Student Name="easin" Nayika="cheka"></Student>
